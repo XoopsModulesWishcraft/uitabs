@@ -1,5 +1,19 @@
 <?php
 
+	// Admin Menus
+	define('_MI_TABS_TITLE_ADMENU1', 'Tabs List');
+	define('_MI_TABS_ICON_ADMENU1', '/images/icons/tabs.list.png');
+	define('_MI_TABS_LINK_ADMENU1', '/admin/index.php?op=tabs&fct=list');
+	define('_MI_TABS_TITLE_ADMENU2', 'New Tab');
+	define('_MI_TABS_ICON_ADMENU2', '/images/icons/tabs.new.png');
+	define('_MI_TABS_LINK_ADMENU2', '/admin/index.php?op=tabs&fct=new');
+	define('_MI_TABS_TITLE_ADMENU3', 'Tab Items List');
+	define('_MI_TABS_ICON_ADMENU3', '/images/icons/items.list.png');
+	define('_MI_TABS_LINK_ADMENU3', '/admin/index.php?op=items&fct=list');
+	define('_MI_TABS_TITLE_ADMENU4', 'New Tab Item');
+	define('_MI_TABS_ICON_ADMENU4', '/images/icons/items.new.png');
+	define('_MI_TABS_LINK_ADMENU4', '/admin/index.php?op=items&fct=new');
+	
 	// Forms
 	define('_MI_TABS_NONE', 'None');
 	define('_MI_TABS_SUBSCRIBE_TO_PACKAGE', 'Subscribe to Video');
