@@ -1,0 +1,31 @@
+<{if $html.a}>
+<a href="<{$html.a}>">
+<{/if}>
+<{if $html.header}>
+<h1><{$html.header}></h1>
+<{/if}>
+<center>
+<{if $html.image}>
+<{$html.image}>
+<{/if}>
+<{if $html.player}>
+<{$html.player}>
+<{/if}>
+</center>
+<{if $html.a}>
+</a>
+<{if $html.subscribe}>
+<h2><{$smarty.const._MN_TABS_SUBSCRIBE}></h2>
+<{$html.subscribe}>
+<{/if}>
+<{if $html.rate}>
+<h2><{$smarty.const._MN_TABS_RATE}></h2>
+<{$html.rate}>
+<{/if}>
+<{/if}>
+<{if $html.text}>
+<{$html.text}>
+<{/if}>
+<{if $html.tagbar}>
+<{include file="db:tag_bar.html" tagbar=$html.tagbar}>
+<{/if}>

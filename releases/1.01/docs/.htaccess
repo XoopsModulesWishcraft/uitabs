@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^tabs/(.*?)/(.*?),(.*?).html$ 															modules/uitabs/index.php?op=$2&id=$3
+RewriteRule ^tabs/(.*?).html$ 																		modules/uitabs/index.php?op=$1
+RewriteRule ^tabs/$				 																	modules/webcams/index.php?op=tabs
