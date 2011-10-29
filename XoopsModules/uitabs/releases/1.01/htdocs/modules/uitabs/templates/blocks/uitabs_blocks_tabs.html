@@ -1,0 +1,18 @@
+<ul class="block_<{$block.xoConfig.ul_class}>">
+<{foreach item=tab from=$block.tabs}>
+	<li><a href="#"><{$tab.name}></a></li>
+<{/foreach}>
+</ul>
+
+<!-- tab "panes" -->
+<div class="block_<{$block.xoConfig.div_class}>">
+<{foreach item=tab from=$block.tabs}>
+	<div id="block_div_uitab_<{$tab.tid}>">
+<{foreach item=item from=$tab.items}>
+		<div id="block_div_uitab_item_<{$item.iid}>" style='float:left;'>
+			<{$item.html}>
+		</div>
+<{/foreach}>
+	</div>
+<{/foreach}>
+</div>
