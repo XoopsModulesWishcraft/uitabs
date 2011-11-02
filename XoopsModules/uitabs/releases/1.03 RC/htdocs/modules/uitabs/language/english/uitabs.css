@@ -1,0 +1,125 @@
+@CHARSET "ISO-8859-1";
+
+
+/* root element for tabs  */
+ul.ul_uitabs {  
+	margin:0 !important; 
+	padding:0;
+	height:30px;
+	border-bottom:1px solid #666;	 	
+}
+
+/* single tab */
+ul.ul_uitabs li {  
+	float:left;	 
+	padding:0; 
+	margin:0;  
+	list-style-type:none;	
+}
+
+/* link inside the tab. uses a background image */
+ul.ul_uitabs a { 
+	float:left;
+	font-size:13px;
+	display:block;
+	padding:5px 30px;	
+	text-decoration:none;
+	border:1px solid #666;	
+	border-bottom:0px;
+	height:18px;
+	background-color:#efefef;
+	color:#777;
+	margin-right:2px;
+	position:relative;
+	top:1px;	
+	outline:0;
+	-moz-border-radius:4px 4px 0 0;	
+}
+
+ul.ul_uitabs a:hover {
+	background-color:#F7F7F7;
+	color:#333;
+}
+	
+/* selected tab */
+ul.ul_uitabs a.current {
+	background-color:#ddd;
+	border-bottom:1px solid #ddd;	
+	color:#000;	
+	cursor:default;
+}
+
+	
+/* tab pane */
+.div_uitabs div.div_uitabs_node {
+	display:none;
+	border:1px solid #666;
+	border-width:0 1px 1px 1px;
+	min-height:280px;
+	padding:15px 20px;
+}
+
+.div_uitabs_item_node {
+	display: block;
+}
+
+
+/* root element for tabs  */
+ul.block_ul_uitabs {  
+	margin:0 !important; 
+	padding:0;
+	height:30px;
+	border-bottom:1px solid #666;	 	
+}
+
+/* single tab */
+ul.block_ul_uitabs li {  
+	float:left;	 
+	padding:0; 
+	margin:0;  
+	list-style-type:none;	
+}
+
+/* link inside the tab. uses a background image */
+ul.block_ul_uitabs a { 
+	float:left;
+	font-size:13px;
+	display:block;
+	padding:5px 30px;	
+	text-decoration:none;
+	border:1px solid #666;	
+	border-bottom:0px;
+	height:18px;
+	background-color:#efefef;
+	color:#777;
+	margin-right:2px;
+	position:relative;
+	top:1px;	
+	outline:0;
+	-moz-border-radius:4px 4px 0 0;	
+}
+
+ul.block_ul_uitabs a:hover {
+	background-color:#F7F7F7;
+	color:#333;
+}
+	
+/* selected tab */
+ul.block_ul_uitabs a.current {
+	background-color:#ddd;
+	border-bottom:1px solid #ddd;	
+	color:#000;	
+	cursor:default;
+}
+
+	
+/* tab pane */
+.block_div_uitabs div.block_div_uitabs_node {
+	display:none;
+	border:1px solid #666;
+	border-width:0 1px 1px 1px;
+	min-height:280px;
+	padding:15px 20px;
+}
+
+
