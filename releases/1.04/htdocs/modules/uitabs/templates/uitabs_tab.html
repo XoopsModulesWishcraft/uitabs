@@ -1,0 +1,29 @@
+<center>
+<{if $html.a}>
+<a href="<{$html.a}>">
+<{/if}>
+<{if $html.header}>
+<strong><{$html.header}></strong><br/>
+<{/if}>
+<{if $html.image}>
+<{$html.image}>
+<{/if}>
+<{if $html.player}>
+<{$html.player}>
+<{/if}>
+<{if $html.a}>
+</a>
+<{/if}>
+<{if $html.subscribe}>
+<{$html.subscribe}>
+<{/if}>
+<{if $html.rate}>
+<{$html.rate}>
+<{/if}>
+</center>
+<{if $html.text}>
+<{$html.text}>
+<{/if}>
+<{if $html.tagbar}>
+<{include file="db:tag_bar.html" tagbar=$html.tagbar}>
+<{/if}>
