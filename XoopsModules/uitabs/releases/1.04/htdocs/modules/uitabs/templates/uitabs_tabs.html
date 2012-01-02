@@ -1,0 +1,31 @@
+<ul class="<{$xoConfig.ul_class}>">
+<{foreach item=tab from=$tabs}>
+	<li><a href="#"><{$tab.name}></a></li>
+<{/foreach}>
+</ul>
+
+<!-- tab "panes" -->
+<div class="<{$xoConfig.div_class}>">
+<{foreach item=tab from=$tabs}>
+	<div class="<{$xoConfig.div_class}>_node" id="div_uitab_<{$tab.tid}>"> 
+<{foreach item=item from=$tab.items}>
+		<div class="<{$xoConfig.div_class}>_item_node" id="div_uitab_item_<{$item.iid}>" style='float:left;'>
+			<{$item.html}>
+		</div>
+<{/foreach}>
+	</div>
+<{/foreach}>
+</div>
+
+<script type="text/javascript">
+$("ul.<{$xoConfig.ul_class}>").tabs("div.<{$xoConfig.div_class}> > div", {
+	current: '<{$xoConfig.default_class}>',
+	effect: '<{$xoConfig.effect}>',
+	event: '<{$xoConfig.event}>',
+	fadeInSpeed: <{$xoConfig.fadeInSpeed}>,
+	fadeOutSpeed: <{$xoConfig.fadeOutSpeed}>,
+	history: <{$xoConfig.history}>,
+	initialIndex: <{$initialIndex}>,
+	rotate: <{$xoConfig.rotate}>							
+});
+</script>

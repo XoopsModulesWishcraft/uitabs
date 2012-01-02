@@ -1,0 +1,8 @@
+========================================
+ 2012/01/02 14:50:00 Version 1.04 STABLE
+========================================
+ - Changed XOOPS 2.5.x Admin GUI Language Constants for Statistics language/english/admin.php  (Wishcraft)
+ - Changed UitabsFormSelectPackageID() form object - specify pid for value - include/formselectpackageid.php  (Wishcraft)
+ - Added XOOPS 2.5.x Admin GUI  (Wishcraft)
+ - Added Admin Menu Language Constants for new Preferences language/english/modinfo.php (GUI)  (Wishcraft)
+  

@@ -1,0 +1,73 @@
+<h1><{$smarty.const._AM_TABS_ITEMS_H1}></h1>
+<p><{$smarty.const._AM_TABS_ITEMS_P}></p>
+<div style="clear:both; height:45px;">
+	<div style="float:right; height:45px;"><{$pagenav}></div>
+</div>
+
+<form action="<{$php_self}>" method='post'>
+<table>
+	<tr class="head">
+		<th><{$iid_th}></th>
+		<th><{$tid_th}></th>
+		<th><{$title_th}></th>
+		<th><{$image_th}></th>
+		<{if $xoConfig.matrixstream}><th><{$pid_th}></th><{/if}>
+		<{if $xoConfig.flowplayer}><th><{$fid_th}></th><{/if}>
+		<th><{$url_th}></th>
+		<th><{$uid_th}></th>
+		<th><{$rank_th}></th>
+		<th><{$clicks_th}></th>
+		<th><{$clicked_th}></th>
+		<th><{$created_th}></th>
+		<th><{$updated_th}></th>
+		<th><{$smarty.const._AM_TABS_TH_ACTIONS}></th>
+	</tr>
+	<tr class="filter">
+		<th>&nbsp;</th>
+		<th><{$filter_tid_th}></th>
+		<th><{$filter_title_th}></th>
+		<th><{$filter_image_th}></th>
+		<{if $xoConfig.matrixstream}><th><{$filter_pid_th}></th><{/if}>
+		<{if $xoConfig.flowplayer}><th><{$filter_fid_th}></th><{/if}>
+		<th><{$filter_url_th}></th>
+		<th>&nbsp;</th>
+		<th>&nbsp;</th>
+		<th><{$filter_clicks_th}></th>
+		<th>&nbsp;</th>
+		<th>&nbsp;</th>
+		<th>&nbsp;</th>
+		<th>&nbsp;</th>
+	</tr>
+	<{foreach item=item from=$items}>
+	<tr class="<{cycle values="even,odd"}>">
+		<td align='center'><{$item.iid}><{$item.form.id}></td>
+		<td align='center'><{$item.form.tid}></td>
+		<td align='center'><{$item.form.title}></td>
+		<td align='center'><{$item.image}></td>
+		<{if $xoConfig.matrixstream}><td align='center'><{$item.form.pid}></td><{/if}>
+		<{if $xoConfig.flowplayer}><td align='center'><{$item.form.fid}></td><{/if}>
+		<td align='center'><{$item.form.url}></td>
+		<td align='right'><{$item.form.uid}></td>
+		<td align='right'><{$item.rank}></td>
+		<td align='right'><{$item.clicks}></td>
+		<td align='right'><{$item.dates.clicked}></td>
+		<td align='right'><{$item.dates.created}></td>
+		<td align='right'><{$item.dates.updated}></td>
+		<td align='right'><a href="<{$php_self}>?op=items&fct=edit&id=<{$item.iid}>&start=<{$start}>&limit=<{$limit}>&order=<{$order}>&sort=<{$sort}>&filter=<{$filter}>"><{$smarty.const._EDIT}></a>&nbsp;|&nbsp;<a href="<{$php_self}>?op=items&fct=delete&id=<{$item.iid}>&start=<{$start}>&limit=<{$limit}>&order=<{$order}>&sort=<{$sort}>&filter=<{$filter}>"><{$smarty.const._DELETE}></a></td>
+	</tr>
+	<{/foreach}>
+	<tr class="foot">
+		<td colspan="14"><input type='submit' name='submit' value='<{$smarty.const._SUBMIT}>'/></td>
+	</tr>
+</table>
+<input type='hidden' name='op' value='items'/>
+<input type='hidden' name='fct' value='savelist'/>
+<input type='hidden' name='start' value='<{$start}>'/>
+<input type='hidden' name='limit' value='<{$limit}>'/>
+<input type='hidden' name='order' value='<{$order}>'/>
+<input type='hidden' name='sort' value='<{$sort}>'/>
+<input type='hidden' name='filter' value='<{$filter}>'/>
+</form>
+<h1><{$smarty.const._AM_TABS_NEW_ITEMS_H1}></h1>
+<p><{$smarty.const._AM_TABS_NEW_ITEMS_P}></p>
+<{$form}>
